@@ -47,6 +47,7 @@ def turn (board)
   index = gets.strip
   if index = between'(0,8)'
     puts "Nice move!"
+    
   else index != between'(0,8)'
     puts "Sorry that space has been taken please try again!"
     index = gets.strip
