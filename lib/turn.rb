@@ -36,10 +36,11 @@ def on_board?(num)
   end
 end
 
-def move 
-  
-
+def move(board, index, character = "X")
+  board[index] = character
+  return board
 end
+
 
 def turn (board)
   puts "Please Enter 1-9"
