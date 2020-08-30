@@ -43,16 +43,16 @@ end
 
 
 def turn (board)
-  puts "Please Enter 1-9"
-  index = gets.strip
-  if index = between'(0,8)'
-    puts "Nice move!"
-    move
-  else index != between'(0,8)'
-    puts "Sorry that space has been taken please try again!"
-    index = gets.strip
-  end 
-end 
+  puts "Please enter 1-9:"
+  num = gets.chomp
+  index = input_to_index(num)
+  if valid_move?(board, index) == true
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
+en
 
 
   
